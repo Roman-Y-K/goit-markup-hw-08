@@ -14,8 +14,9 @@
 
   font-weight: 400;
   src: local("Roboto"), local("Roboto-Regular"),
-    url("../fonts/roboto-v20-latin_cyrillic-regular.woff2") format("woff2"),
-    url("../fonts/roboto-v20-latin_cyrillic-regular.woff") format("woff");
+    url("../fonts/roboto/roboto-v20-latin_cyrillic-regular.woff2")
+      format("woff2"),
+    url("../fonts/roboto/roboto-v20-latin_cyrillic-regular.woff") format("woff");
 }
 
 @font-face {
