@@ -1,6 +1,34 @@
 .clients-list {
   display: flex;
-  justify-content: center;
+
+  @include for-size(tablet-max) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.clients-item {
+  @include for-size(mobile-max) {
+    width: calc((100% - 30px) / 2);
+
+    &:nth-child(-n + 4) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include for-size(tablet-landscape) {
+    width: calc((100% - 60px) / 3);
+
+    &:nth-child(-n + 3) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include for-size(desktop) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }
 
 .clients-link {
@@ -8,7 +36,7 @@
   justify-content: center;
   align-items: center;
 
-  width: 170px;
+  width: 100%;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -27,8 +55,4 @@
   .clients-link:focus & {
     fill: $accent-text-color;
   }
-}
-
-.clients-item:not(:last-child) {
-  margin-right: 30px;
 }

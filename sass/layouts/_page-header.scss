@@ -1,3 +1,6 @@
+.header {
+  position: relative;
+}
 
 .navigate {
   display: flex;
@@ -7,4 +10,11 @@
 .main-nav {
   display: flex;
   align-items: center;
+
+  @include for-size(mobile-max) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
 }

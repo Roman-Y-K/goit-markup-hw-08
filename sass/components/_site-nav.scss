@@ -1,7 +1,13 @@
 .site-nav {
-  display: flex;
   margin-left: 85px;
   color: inherit;
+
+  display: none;
+
+  @include for-size(tablet-landscape) {
+    display: flex;
+    // margin-right: 80px;
+  }
 }
 
 .site-nav .item:not(:last-child) {
@@ -25,7 +31,8 @@
   }
 }
 
-.site-nav .link.current {
+.site-nav .link.current,
+.mobile-nav .link.current {
   position: relative;
 
   color: $accent-text-color;

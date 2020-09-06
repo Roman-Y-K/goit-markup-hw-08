@@ -1,9 +1,13 @@
 .sign-up {
-  width: 570px;
+  @include for-size(tablet-max) {
+    text-align: center;
+  }
 }
 
 .form {
-  display: flex;
+  @include for-size(desktop) {
+    display: flex;
+  }
 }
 
 .email-input {
@@ -16,7 +20,7 @@
   padding-left: 16px;
   margin: 0;
   margin-right: 12px;
-  width: 358px;
+  // width: 358px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   box-sizing: border-box;
@@ -31,10 +35,24 @@
 
     color: rgba(255, 255, 255, 0.6);
   }
+
+  @include for-size(mobile-max) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+
+  @include for-size(desktop) {
+    width: 358px;
+  }
 }
 
 .button-footer {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   margin-right: 0;
   padding-left: 28px;

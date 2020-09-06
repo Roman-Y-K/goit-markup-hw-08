@@ -1,4 +1,10 @@
 .engage {
+  display: none;
+
+  @include for-size(desktop) {
+    display: block;
+  }
+
   padding-top: 0;
 }
 

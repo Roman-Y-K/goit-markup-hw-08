@@ -13,6 +13,7 @@
 
 .advantages-text {
   margin: 0;
+  text-align: left;
 
   font-size: 14px;
   line-height: 1.714;
@@ -20,14 +21,36 @@
 }
 
 .advantages-list {
-  display: flex;
+  @include for-size(tablet-landscape) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .advantages-item {
-  width: calc((100% - 90px) / 4);
+  @media screen and (max-width: 767px) {
+    text-align: center;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include for-size(tablet-landscape) {
+    width: calc((100% - 30px) / 2);
+
+    &:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include for-size(desktop) {
+    width: calc((100% - 90px) / 4);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 

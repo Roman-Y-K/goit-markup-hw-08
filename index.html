@@ -14,8 +14,25 @@
       <div class="conteiner navigate ">
         <nav class="main-nav">
           <a href="./index.html" class="logo link">
-            Web <span class="logo-black">Studio</span>
+            Web<span class="logo-black">Studio</span>
           </a>
+
+          <button
+            type="button"
+            class="menu-button"
+            area-label="переключатель мобильного меню"
+            aria-expanded="false"
+            area-controls="menu-container"
+            data-menu-button
+          >
+            <svg width="24" height="16">
+              <use class="icon-menu" href="./images/icons/sprite.svg#icon-menu"></use>
+              <use
+                class="icon-cross"
+                href="./images/icons/sprite.svg#icon-cross"
+              ></use>
+            </svg>
+          </button>
 
           <!-- Навигация -->
           <ul class="site-nav list">
@@ -46,6 +63,36 @@
             </a>
           </li>
         </ul>
+
+        <!-- Мобильное меню -->
+        <div class="mobile" data-menu>
+        <ul class="mobile-nav list">
+            <li class="item"><a href="" class="link current">Студия</a></li>
+            <li class="item">
+              <a href="./portfolio.html" class="link">Портфолио</a>
+            </li>
+            <li class="item"><a href="" class="link">Контакты</a></li>
+          </ul>
+
+          <ul class="mobile-contacts list">
+          <li class="item mail">
+            <a href="mailto:info@devstudio.com" class="link">
+              <svg class="icon-mail">
+                <use href="./images/icons/sprite.svg#icon-mail"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="item pfone">
+            <a href="tel:+380961111111" class="link">
+              <svg class="icon-phone">
+                <use href="./images/icons/sprite.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -124,6 +171,7 @@
             <li class="engage-item">
               <img
                 src="./images/img1.jpg"
+                srcset="./images/img1@2x.jpg 2x"
                 class="img"
                 alt="ноутбук"
                 width="370"
@@ -133,6 +181,7 @@
             <li class="engage-item">
               <img
                 src="./images/img2.jpg"
+                srcset="./images/img2@2x.jpg 2x"
                 alt="смартфон"
                 width="370"
                 class="img"
@@ -142,6 +191,7 @@
             <li class="engage-item">
               <img
                 src="./images/img3.jpg"
+                srcset="./images/img3@2x.jpg 2x"
                 alt="монитор"
                 width="370"
                 class="img"
@@ -158,12 +208,18 @@
           <h2 class="section-title team-title">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-item">
-              <img
-                src="./images/1.jpg"
+            <picture>
+              <source srcset="./images/team/desktop/1.jpg 1x, ./images/team/desktop/igor@2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/team/tablet/igor.jpg 1x, ./images/team/tablet/igor@2x.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="./images/team/mobile/igor.jpg 1x, ./images/team/mobile/igor@2x.jpg 2x" media="(max-width: 767px)" />
+             <img
+                src="./images/team/desktop/1.jpg"
                 alt=""
-                width="270"
+                
                 class="team-foto img"
               />
+            </picture>
+              
               <div class="team-desc">
                 <h3 class="team-names">Игорь Демьяненко</h3>
                 <p class="team-function">Product Designer</p>
@@ -232,12 +288,17 @@
               </div>
             </li>
             <li class="team-item">
-              <img
-                src="./images/2.jpg"
+              <picture>
+              <source srcset="./images/team/desktop/2.jpg 1x, ./images/team/desktop/olga@2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/team/tablet/olga.jpg 1x, ./images/team/tablet/olga@2x.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="./images/team/mobile/olga.jpg 1x, ./images/team/mobile/olga@2x.jpg 2x" media="(max-width: 767px)" />
+             <img
+                src="./images/team/desktop/olga.jpg"
                 alt=""
-                width="270"
+                
                 class="team-foto img"
               />
+            </picture>
               <div class="team-desc">
                 <h3 class="team-names">Ольга Репина</h3>
                 <p class="team-function">Frontend Developer</p>
@@ -306,12 +367,17 @@
               </div>
             </li>
             <li class="team-item">
-              <img
-                src="./images/3.jpg"
+              <picture>
+              <source srcset="./images/team/desktop/3.jpg 1x, ./images/team/desktop/nikolay@2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/team/tablet/nikolay.jpg 1x, ./images/team/tablet/nikolay@2x.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="./images/team/mobile/nikolay.jpg 1x, ./images/team/mobile/nikolay@2x.jpg 2x" media="(max-width: 767px)" />
+             <img
+                src="./images/team/desktop/nikolay.jpg"
                 alt=""
-                width="270"
+                
                 class="team-foto img"
               />
+            </picture>
               <div class="team-desc">
                 <h3 class="team-names">Николай Тарасов</h3>
                 <p class="team-function">Marketing</p>
@@ -380,12 +446,17 @@
               </div>
             </li>
             <li class="team-item">
-              <img
-                src="./images/4.jpg"
+               <picture>
+              <source srcset="./images/team/desktop/4.jpg 1x, ./images/team/desktop/mikhail@2x.jpg 2x" media="(min-width: 1200px)" />
+              <source srcset="./images/team/tablet/mikhail.jpg 1x, ./images/team/tablet/mikhail@2x.jpg 2x" media="(min-width: 768px)" />
+              <source srcset="./images/team/mobile/mikhail.jpg 1x, ./images/team/mobile/mikhail@2x.jpg 2x" media="(max-width: 767px)" />
+             <img
+                src="./images/team/desktop/mikhail.jpg"
                 alt=""
-                width="270"
+                
                 class="team-foto img"
               />
+            </picture>
               <div class="team-desc">
                 <h3 class="team-names">Михаил Ермаков</h3>
                 <p class="team-function">UI Designer</p>
@@ -513,6 +584,7 @@
     <!-- Футер -->
     <footer class="footer">
       <div class="conteiner footer-content">
+        <div class="footer-tablet">
         <div class="footer-box">
           <a href="./index.html" class="logo link logo-footer">
             Web <span class="logo-white">Studio</span>
@@ -537,7 +609,7 @@
         <!-- Соц сети -->
         <div class="footer-box">
           <h3 class="join">Присоединяйтесь</h3>
-          <ul class="list link join-list">
+          <ul class="list link social-list join-list ">
             <li class="join-item">
               <a
                 href="https://www.instagram.com"
@@ -592,9 +664,10 @@
             </li>
           </ul>
         </div>
+        </div>
 
         <!-- Форма рассылки -->
-        <div class="sign-up">
+        <div class="sign-up ">
           <form action="" class="footer-form">
             <h3 class="join">Подпишитесь на рассылку</h3>
             <div class="form">
@@ -687,7 +760,7 @@
             <label class="modal-contract">
               <input type="checkbox" name="contract" class="checkbox in" /><span
                 class="check-icon"
-              ></span> <span >
+              ></span><span >
               Соглашаюсь с рассылкой и принимаю
               <a href="" class="modal-link">
                 <span class="modal-contract contrakt-link">
@@ -702,6 +775,7 @@
       </div>
     </div>
 
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

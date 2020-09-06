@@ -6,6 +6,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  // outline: 2px solid red;
 }
 
 body {
@@ -29,8 +30,13 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include for-size(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section-title {
@@ -38,21 +44,29 @@ body {
   margin-bottom: 50px;
 
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.167;
+  font-size: 28px;
+  line-height: 1.178;
   text-align: center;
 
   color: $primery-text-color;
+
+  @include for-size(desktop) {
+    font-size: 36px;
+    line-height: 1.167;
+  }
 }
 
 .img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .conteiner {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+
   margin: 0 auto;
 
   @include for-size(mobile-portrait) {
@@ -60,10 +74,12 @@ body {
   }
 
   @include for-size(tablet-landscape) {
-    width: 480px;
+    width: 768px;
   }
 
   @include for-size(desktop) {
-    width: 480px;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
