@@ -10,7 +10,7 @@
   font-family: "roboto";
   font-style: normal;
   font-weight: 400;
-  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/roboto-v20-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/roboto-v20-latin_cyrillic-regular.woff") format("woff");
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/roboto/roboto-v20-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/roboto/roboto-v20-latin_cyrillic-regular.woff") format("woff");
 }
 
 @font-face {
@@ -646,6 +646,13 @@ body {
   height: 4px;
   border-radius: 2px;
   background-color: #2196f3;
+}
+
+@media (max-width: 767px) {
+  .site-nav .link.current::after,
+  .mobile-nav .link.current::after {
+    bottom: -8px;
+  }
 }
 
 .contacts {
